@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>{{msg}}</h1>
+    <form action="{% url 'adminloginpage' %}" method="post">
+        {% csrf_token %}
+        name : <input type="text" name="fname">
+        email : <input type="email" name="email">
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
